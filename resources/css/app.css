@@ -1545,3 +1545,253 @@ input:focus-visible {
         animation-iteration-count: 1 !important;
     }
 }
+
+/* =====================================================
+   SIPINTAR - REGISTRATION PAGE
+   Compact, consistent and responsive
+===================================================== */
+
+.register-panel {
+    padding: clamp(22px, 2.8vw, 34px);
+}
+
+.register-content {
+    max-width: 470px;
+    padding: 12px 0;
+}
+
+.register-intro .intro-kicker-row {
+    margin-bottom: 10px;
+}
+
+.register-intro .welcome-icon {
+    margin-bottom: 0;
+}
+
+.register-intro h2 {
+    margin-bottom: 8px;
+    font-size: clamp(26px, 2.4vw, 34px);
+}
+
+.register-intro .form-description {
+    max-width: 420px;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* Registration form */
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.register-form .field-group {
+    gap: 5px;
+}
+
+.register-form .field-group > label {
+    font-size: 10px;
+}
+
+/* Input fields */
+
+.register-form .input-wrap input,
+.register-select {
+    height: 42px;
+    border-radius: 10px;
+    font-size: 11px;
+}
+
+/* Dropdown bidang */
+
+.register-select {
+    width: 100%;
+    min-width: 0;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    padding: 0 42px 0 48px;
+
+    border: 1px solid #E4E1D8;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.82);
+    color: var(--text);
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.register-select:focus {
+    border-color: var(--forest);
+    background: #FFFFFF;
+
+    box-shadow: 0 0 0 4px rgba(41, 76, 58, 0.08);
+}
+
+.register-select:invalid {
+    color: #92998B;
+}
+
+.input-wrap > .register-select-chevron {
+    left: auto;
+    right: 14px;
+
+    width: 16px;
+    height: 16px;
+
+    color: #92998B;
+    pointer-events: none;
+}
+
+/* Password toggle */
+
+.register-form .password-toggle {
+    width: 27px;
+    height: 27px;
+}
+
+/* Helper text */
+
+.register-help {
+    margin: 0;
+
+    color: #858A80;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+/* Validation errors */
+
+.field-error {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #B94E42;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+/* Empty bidang notice */
+
+.register-notice {
+    margin-top: 14px;
+    padding: 11px 13px;
+
+    border: 1px solid #E9D7BD;
+    border-radius: 10px;
+
+    background: #FBF0DF;
+    color: #8A6136;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* Disabled submit */
+
+.register-form .login-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Registration success message on login page */
+
+.auth-status-message {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 12px 14px;
+
+    border: 1px solid #C9DCC6;
+    border-radius: 11px;
+
+    background: #EAF2E6;
+    color: #315C3C;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Tablet and desktop */
+
+@media (min-width: 761px) {
+
+    .register-content {
+        padding: 10px 0;
+    }
+
+    .register-form {
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+    .register-form .input-wrap input,
+    .register-select {
+        height: 42px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+
+    .register-panel {
+        min-height: 720px;
+        padding: 28px 25px 24px;
+    }
+
+    .register-content {
+        max-width: 440px;
+        padding: 22px 0;
+    }
+
+    .register-intro h2 {
+        font-size: 29px;
+    }
+
+    .register-form {
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+    .register-form .input-wrap input,
+    .register-select {
+        height: 46px;
+    }
+
+}
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+
+    .register-panel {
+        padding-right: 19px;
+        padding-left: 19px;
+    }
+
+    .register-intro h2 {
+        font-size: 27px;
+    }
+
+    .register-prompt {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+}
