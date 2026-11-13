@@ -1,0 +1,78 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 440 104"
+     role="img"
+     aria-labelledby="title desc">
+
+    <title id="title">SIPINTAR</title>
+    <desc id="desc">
+        Logo Sistem Informasi Persediaan Terintegrasi
+    </desc>
+
+    <!-- Simbol utama -->
+    <rect x="8" y="8"
+          width="88" height="88"
+          rx="23"
+          fill="#365A43"
+          stroke="#718D76"
+          stroke-width="1"/>
+
+    <!-- Bentuk gudang -->
+    <path d="M27 39 L52 23 L77 39"
+          fill="none"
+          stroke="#F6F2E9"
+          stroke-width="3.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+
+    <path d="M31 38 V77 H73 V38"
+          fill="none"
+          stroke="#F6F2E9"
+          stroke-width="3"
+          stroke-linejoin="round"/>
+
+    <!-- Rak persediaan -->
+    <path d="M31 51 H73 M31 64 H73"
+          stroke="#A9B9A2"
+          stroke-width="2.5"
+          stroke-linecap="round"/>
+
+    <!-- Barang pada rak -->
+    <rect x="36" y="40" width="14" height="9"
+          rx="2" fill="#C8A96A"/>
+
+    <rect x="54" y="40" width="14" height="9"
+          rx="2" fill="#A9B9A2"/>
+
+    <rect x="36" y="54" width="17" height="8"
+          rx="2" fill="#C86F52"/>
+
+    <rect x="57" y="54" width="11" height="8"
+          rx="2" fill="#F6F2E9"/>
+
+    <rect x="36" y="67" width="14" height="8"
+          rx="2" fill="#A9B9A2"/>
+
+    <rect x="54" y="67" width="14" height="8"
+          rx="2" fill="#C8A96A"/>
+
+    <!-- Wordmark -->
+    <text x="116" y="55"
+          fill="#F6F2E9"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="38"
+          font-weight="700"
+          letter-spacing="1.8">
+        SIPINTAR
+    </text>
+
+    <!-- Tagline -->
+    <text x="119" y="77"
+          fill="#C7D1BF"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="12"
+          letter-spacing="0.15">
+        Sistem Informasi Persediaan Terintegrasi
+    </text>
+
+</svg>

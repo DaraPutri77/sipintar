@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Halaman utama SIPINTAR
+Route::view('/', 'auth.login')->name('home');
+
+// Halaman login
+Route::view('/login', 'auth.login')->name('login');
