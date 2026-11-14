@@ -10,7 +10,7 @@
 
 /* =========================================================
    SIPINTAR — LOGIN PAGE
-   Tema: forest green, sage, ivory, dan terracotta
+   Tema: Forest Green, Sage, Ivory, dan Terracotta
    ========================================================= */
 
 :root {
@@ -124,6 +124,7 @@ svg {
 
 .login-shell {
     display: grid;
+
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
 
     width: min(1160px, 100%);
@@ -213,7 +214,7 @@ svg {
     color: inherit;
 }
 
-/* LOGO DIPERBESAR TANPA KOTAK PEMBUNGKUS */
+/* Logo tanpa kotak pembungkus */
 
 .brand-symbol {
     display: grid;
@@ -519,7 +520,6 @@ svg {
 
 /* =========================================================
    5. PANEL KANAN — FORM LOGIN
-   Desain dipertahankan sesuai versi yang sudah disetujui.
    ========================================================= */
 
 .form-panel {
@@ -563,7 +563,58 @@ svg {
         #f7f3ea;
 }
 
-/* Dekorasi panel kanan: lingkaran, titik, garis, dan daun */
+/* Ornamen latar panel kanan */
+
+.form-panel--enhanced::before {
+    position: absolute;
+    z-index: 0;
+    top: 100px;
+    right: -185px;
+
+    width: 370px;
+    height: 370px;
+
+    border: 1px solid rgba(84, 115, 93, 0.14);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 25px rgba(84, 115, 93, 0.035),
+        0 0 0 52px rgba(84, 115, 93, 0.025);
+
+    content: '';
+    pointer-events: none;
+}
+
+.form-panel--enhanced::after {
+    position: absolute;
+    z-index: 0;
+    right: 30px;
+    bottom: 82px;
+
+    width: 108px;
+    height: 82px;
+
+    background-image: radial-gradient(
+        circle,
+        rgba(84, 115, 93, 0.22) 1.1px,
+        transparent 1.5px
+    );
+
+    background-size: 13px 13px;
+
+    opacity: 0.5;
+
+    mask-image: linear-gradient(
+        135deg,
+        #000 15%,
+        transparent 90%
+    );
+
+    content: '';
+    pointer-events: none;
+}
+
+/* Dekorasi panel kanan */
 
 .form-decoration {
     position: absolute;
@@ -621,7 +672,12 @@ svg {
     background-size: 14px 14px;
 
     opacity: 0.55;
-    mask-image: linear-gradient(135deg, #000 15%, transparent 90%);
+
+    mask-image: linear-gradient(
+        135deg,
+        #000 15%,
+        transparent 90%
+    );
 }
 
 .decoration-leaf {
@@ -778,8 +834,88 @@ svg {
     padding: 18px 0;
 }
 
+.login-content--rich {
+    width: 100%;
+    max-width: 430px;
+}
+
 .form-intro {
     position: relative;
+}
+
+.form-intro--rich {
+    position: relative;
+}
+
+.form-intro--rich .intro-kicker-row,
+.form-intro--rich h2,
+.form-intro--rich .form-description {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ornamen daun pada bagian kanan judul login */
+
+.leaf-ornament {
+    position: absolute;
+    z-index: 0;
+    top: -8px;
+    right: 0;
+
+    width: 58px;
+    height: 76px;
+
+    opacity: 0.68;
+    pointer-events: none;
+}
+
+.leaf-ornament .leaf {
+    position: absolute;
+    display: block;
+
+    border-radius: 100% 0 100% 0;
+    background: linear-gradient(145deg, #b8c9a4, #78956f);
+}
+
+.leaf-ornament .leaf-one {
+    top: 0;
+    right: 17px;
+
+    width: 23px;
+    height: 47px;
+
+    transform: rotate(25deg);
+}
+
+.leaf-ornament .leaf-two {
+    top: 25px;
+    right: 1px;
+
+    width: 19px;
+    height: 38px;
+
+    transform: rotate(58deg);
+
+    background: linear-gradient(145deg, #c8d3b8, #91a981);
+}
+
+.leaf-ornament::after {
+    position: absolute;
+    top: 29px;
+    right: 24px;
+
+    width: 1px;
+    height: 39px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(84, 115, 93, 0.05),
+        rgba(84, 115, 93, 0.42)
+    );
+
+    content: '';
+    transform: rotate(24deg);
+    transform-origin: top center;
 }
 
 .intro-kicker-row {
@@ -1027,7 +1163,6 @@ svg {
 
 /* =========================================================
    7. TOMBOL LOGIN
-   Teks berada tepat di tengah, panah tetap di sisi kanan.
    ========================================================= */
 
 .login-button {
@@ -1231,6 +1366,13 @@ svg {
 
     .form-intro--rich h2 {
         font-size: clamp(28px, 3.1vw, 33px);
+    }
+
+    .leaf-ornament {
+        top: -5px;
+        right: 0;
+        transform: scale(0.86);
+        transform-origin: top right;
     }
 }
 
@@ -1472,6 +1614,13 @@ svg {
     .form-footer--brand {
         font-size: 9px;
     }
+
+    .leaf-ornament {
+        top: -3px;
+        right: -2px;
+        transform: scale(0.82);
+        transform-origin: top right;
+    }
 }
 
 /* =========================================================
@@ -1521,6 +1670,13 @@ svg {
         flex-direction: column;
         gap: 2px;
     }
+
+    .leaf-ornament {
+        top: -3px;
+        right: -2px;
+        transform: scale(0.76);
+        transform-origin: top right;
+    }
 }
 
 /* =========================================================
@@ -1547,9 +1703,9 @@ input:focus-visible {
 }
 
 /* =====================================================
-   SIPINTAR - REGISTRATION PAGE
+   13. SIPINTAR — REGISTRATION PAGE
    Compact, consistent and responsive
-===================================================== */
+   ===================================================== */
 
 .register-panel {
     padding: clamp(22px, 2.8vw, 34px);
@@ -1706,13 +1862,14 @@ input:focus-visible {
     box-shadow: none;
 }
 
-/* Registration success message on login page */
+/* Registration success message */
 
 .auth-status-message {
     position: relative;
     z-index: 2;
 
     width: 100%;
+
     margin-bottom: 18px;
     padding: 12px 14px;
 
@@ -1743,7 +1900,6 @@ input:focus-visible {
     .register-select {
         height: 42px;
     }
-
 }
 
 /* Mobile */
@@ -1773,7 +1929,6 @@ input:focus-visible {
     .register-select {
         height: 46px;
     }
-
 }
 
 /* Small mobile */
@@ -1793,5 +1948,4 @@ input:focus-visible {
         font-size: 11px;
         line-height: 1.7;
     }
-
 }
